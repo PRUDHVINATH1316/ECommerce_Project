@@ -27,19 +27,34 @@ A simple console-based E-Commerce Management System built using **Java**, **Spri
 Create a database (e.g., ecommerce_db)
 
 Import SQL tables if provided (or allow the app to create tables)
+
+
+
 3.Configure database in application.properties
 
-properties
-Copy
-Edit
+
+
+
 spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+
+
+
 spring.datasource.username=your_username
+
+
+
 spring.datasource.password=your_password
+
+
+
 4.Run the application
 
 Open the project in an IDE like IntelliJ or Eclipse
 
 Run the main class EcomProjApplication.java
+
+
+
 
 📂 Project Structure
 ecom-proj/
