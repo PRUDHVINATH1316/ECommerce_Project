@@ -6,7 +6,7 @@ A simple console-based E-Commerce Management System built using **Java**, **Spri
 - Java
 - Spring Boot
 - JDBC (Java Database Connectivity)
-- MySQL
+-  H2 (In-Memory Database)
 - Maven
 
 ## 📌 Features
@@ -22,28 +22,34 @@ A simple console-based E-Commerce Management System built using **Java**, **Spri
    ```bash
    git clone https://github.com/yourusername/ecom-proj.git
    cd ecom-proj
-2.Set up MySQL database
+2.Run the application
 
-Create a database (e.g., ecommerce_db)
+Open the project in an IDE like IntelliJ or Eclipse
 
-Import SQL tables if provided (or allow the app to create tables)
+Run the main class EcomProjApplication.java
 
-
-
-3.Configure database in application.properties
+📝 Note: The project uses an H2 in-memory database, so there's no need for manual database setup. Data will be reset on each run.
 
 
+3.⚙️ Configuration - application.properties
+
+spring.application.name=ecom-proj
 
 
-spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+spring.datasource.url=jdbc:h2:mem:prudhvi
 
 
-
-spring.datasource.username=your_username
-
+spring.datasource.driverClassName=org.h2.Driver
 
 
-spring.datasource.password=your_password
+spring.jpa.show-sql=true
+
+
+spring.jpa.hibernate.ddl-auto=update
+
+
+spring.jpa.defer-datasource-initialization=true
+
 
 
 
